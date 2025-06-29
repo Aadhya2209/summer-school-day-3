@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Day 3 Assignment</title>
+
+  <style>
+    :root {
+      --main-color: #00bcd4;
+      --padding: 1rem;
+      --bg-light: #f0f8ff;
+      --bg-dark: #0d1117;
+      --text-light: #ffffff;
+      --text-dark: #222;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    header {
+      background: #00bcd4;
+      padding: var(--padding);
+      text-align: center;
+    }
+
+    header h1 {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .button {
+      margin-top: 1rem;
+      padding: 10px 20px;
+      border: none;
+      background-color: #ffffff;
+      color: var(--main-color);
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background-color: #e0f7fa;
+    }
+
+    main.container {
+      padding: 2rem;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .wrapper {
+      margin-bottom: 2rem;
+      overflow: auto;
+    }
+
+    .image-box {
+      float: left;
+      margin-right: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .image-box img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid #00bcd4;
+    }
+
+    .content-box {
+      overflow: auto;
+    }
+
+    .two-column {
+      margin-bottom: 2rem;
+      overflow: auto;
+    }
+
+    .column {
+      width: 48%;
+      float: left;
+      background: white;
+      padding: 1.2rem;
+      border-radius: 10px;
+      border: 2px solid var(--main-color);
+      margin-bottom: 1rem;
+    }
+
+    .column:first-child {
+      margin-right: 4%;
+    }
+
+    .box-model {
+      border: 5px solid #2196f3;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      background: #e3f2fd;
+      border-radius: 8px;
+      clear: both;
+    }
+
+    .positioning {
+      position: relative;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .relative-box {
+      position: relative;
+      background: #a5d6a7;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff8a65;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      background: #fff176;
+      padding: 0.5rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .overflow-box {
+      height: 100px;
+      overflow: scroll;
+      border: 2px dashed #555;
+      padding: 0.75rem;
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      clear: both;
+    }
+
+    /* Specificity Test */
+    p {
+      color: red;
+    }
+
+    .text {
+      color: blue;
+    }
+
+    #para {
+      color: green;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        background: #ffe0b2;
+      }
+
+      .image-box {
+        float: none;
+        margin: 0 auto 1rem;
+        text-align: center;
+      }
+
+      .image-box img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .column {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>✨ CSS Day 3 Assignment ✨</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="title">
+      <h2>Welcome to My Mini Webpage</h2>
+      <p class="text" id="para">Demonstrating selectors, specificity, and responsive CSS magic!</p>
+    </section>
+
+    <section class="wrapper">
+      <div class="image-box">
+        <img src="1.jpg" alt="My Profile Image">
+      </div>
+      
+      <div class="content-box">
+        <p>
+          Hi, I'm <strong>Aadhya</strong>, an aspiring web developer with a passion for creating clean and responsive designs.
+          This circular image floats to the left using CSS properties like <code>float</code>, <code>border-radius</code>.
+          It reflects my personal style — simple, modern, and user-friendly.
+          As someone learning <strong>HTML, CSS, JavaScript</strong>, and exploring <strong>C, C++, Java, Python</strong>,
+          I love experimenting with layouts that not only look good but also work well on any device.
+        </p>
+      </div>
+    </section>
+
+    <section class="two-column">
+      <div class="column">🌟 This is the left column using floats.</div>
+      <div class="column">🌈 This is the right column using floats.</div>
+    </section>
+
+    <div class="box-model">
+      <p>📦 This box showcases the Box Model: margin, padding, and border.</p>
+    </div>
+
+    <div class="positioning">
+      <div class="sticky-box">🔝 I'm sticky and stay at top!</div>
+      <div class="relative-box">📌 I'm positioned relative.</div>
+      <div class="absolute-box">🎯 I'm absolutely placed.</div>
+    </div>
+
+    <div class="overflow-box">
+      This is an overflow box filled with lots of text so you can see how scrolling works. When the content exceeds a certain limit, the browser shows a scrollbar. This feature is very useful when you want to display more information within a limited area. Let's add some more text: This text is just for example. You don't have to read it, but it shows how `overflow: scroll;` works in CSS. Thank you!
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 • Created with 💖 by Aadhya</p>
+  </footer>
+
+</body>
+</html>
